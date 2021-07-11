@@ -38,6 +38,7 @@ gem 'pry-rails', '~> 0.3.9'
 gem 'rexml', '~> 3.2', '>= 3.2.5'
 
 gem 'strip_attributes', '~> 1.11'
+gem 'activerecord-import', '~> 1.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
