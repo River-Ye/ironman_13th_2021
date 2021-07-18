@@ -39,6 +39,7 @@ gem 'rexml', '~> 3.2', '>= 3.2.5'
 
 gem 'strip_attributes', '~> 1.11'
 gem 'activerecord-import', '~> 1.1'
+gem 'paranoia', '~> 2.1', '>= 2.1.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
