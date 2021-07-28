@@ -205,6 +205,8 @@ GEM
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
       redis (>= 4.2.0)
+    sidekiq-limit_fetch (3.4.0)
+      sidekiq (>= 4)
     sidekiq-scheduler (3.1.0)
       e2mmap
       redis (>= 3, < 5)
@@ -274,6 +276,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   sidekiq (~> 6.2, >= 6.2.1)
+  sidekiq-limit_fetch (~> 3.4)
   sidekiq-scheduler (~> 3.1)
   spring
   strip_attributes (~> 1.11)

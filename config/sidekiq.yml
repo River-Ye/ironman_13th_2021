@@ -7,4 +7,6 @@
     cron: '* * * * *'
     queue: test
     enabled: true
+:limits:
+  test: 2
 :timeout: 86400

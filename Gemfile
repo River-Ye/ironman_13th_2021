@@ -43,6 +43,7 @@ gem 'paranoia', '~> 2.1', '>= 2.1.5'
 
 gem 'sidekiq', '~> 6.2', '>= 6.2.1'
 gem 'sidekiq-scheduler', '~> 3.1'
+gem 'sidekiq-limit_fetch', '~> 3.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
