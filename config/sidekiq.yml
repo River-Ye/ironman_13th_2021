@@ -1,0 +1,10 @@
+:concurrency: 10
+:queues:
+  - ['default', 1]
+  - ['test', 5]
+:schedule:
+  TestWorker:
+    cron: '* * * * *'
+    queue: test
+    enabled: true
+:timeout: 86400
