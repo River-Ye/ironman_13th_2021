@@ -205,6 +205,10 @@ GEM
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
       redis (>= 4.2.0)
+    sidekiq-grouping (1.0.10)
+      activesupport
+      concurrent-ruby
+      sidekiq (>= 3.4.2)
     sidekiq-limit_fetch (3.4.0)
       sidekiq (>= 4)
     sidekiq-scheduler (3.1.0)
@@ -276,6 +280,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   sidekiq (~> 6.2, >= 6.2.1)
+  sidekiq-grouping (~> 1.0, >= 1.0.10)
   sidekiq-limit_fetch (~> 3.4)
   sidekiq-scheduler (~> 3.1)
   spring
