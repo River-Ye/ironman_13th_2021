@@ -15,5 +15,10 @@
   <%= @shop.note %>
 </p>
 
+<p>
+  <% qrcode = RQRCode::QRCode.new("https://riverye.com/") %>
+  <%= qrcode.as_svg(color: :black, offset: 15, shape_rendering: "optimizeSpeed", module_size: 10).html_safe %>
+</p>
+
 <%= link_to 'Edit', edit_shop_path(@shop) %> |
 <%= link_to 'Back', shops_path %>
