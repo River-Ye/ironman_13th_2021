@@ -48,6 +48,7 @@ gem 'sidekiq-grouping', '~> 1.0', '>= 1.0.10'
 
 # qrcode
 gem 'rqrcode', '~> 2.1'
+gem 'barby', '~> 0.6.8'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
