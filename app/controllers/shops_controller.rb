@@ -1,3 +1,5 @@
+require "barby/barcode/qr_code"
+
 class ShopsController < ApplicationController
   before_action :set_shop, only: %i[ show edit update destroy ]
 
@@ -8,6 +10,7 @@ class ShopsController < ApplicationController
 
   # GET /shops/1 or /shops/1.json
   def show
+    @barcode = Barby::QrCode.new("https://riverye.com/").to_svg(xdim: 12).html_safe
   end
 
   # GET /shops/new
