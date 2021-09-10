@@ -1,4 +1,5 @@
 require "barby/barcode/qr_code"
+require 'barby/outputter/svg_outputter'
 
 class ShopsController < ApplicationController
   before_action :set_shop, only: %i[ show edit update destroy ]
