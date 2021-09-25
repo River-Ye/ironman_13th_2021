@@ -127,4 +127,13 @@ RSpec.describe "/shops", type: :request do
       expect(response).to redirect_to(shops_url)
     end
   end
+
+  describe "GET /download_pdf" do
+    subject { get download_pdf_shops_path, params: { format: :text } }
+
+    it "send correct file" do
+      allow_any_instance_of(ShopsController).to receive(:send_file).with(Rails.root.join('data/river_demo_pdf.pdf'))
+      subject
+    end
+  end
 end
