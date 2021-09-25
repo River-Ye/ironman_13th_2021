@@ -66,6 +66,12 @@ class ShopsController < ApplicationController
     send_file pdf_path
   end
 
+  def export_shops_xlsx
+    xlsx = ShopsExcel::Generator.new.execute
+
+    send_data(xlsx.to_stream.read, type: 'application/xlsx', filename: '商家總表.xlsx')
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_shop
