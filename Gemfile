@@ -25,6 +25,12 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+# xlsx
+gem 'rubyzip', '~> 2.3', '>= 2.3.2'
+gem 'axlsx_rails', '~> 0.6.1'
+gem 'axlsx', git: "https://github.com/randym/axlsx.git",
+             ref: "c8ac844572b25fda358cc01d2104720c4c42f450"
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
