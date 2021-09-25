@@ -52,6 +52,7 @@ gem 'barby', '~> 0.6.8'
 
 # pdf
 gem 'combine_pdf', '~> 1.0', '>= 1.0.21'
+gem 'prawn', '~> 2.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
