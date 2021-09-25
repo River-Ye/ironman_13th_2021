@@ -60,6 +60,12 @@ class ShopsController < ApplicationController
     end
   end
 
+  def download_pdf
+    pdf_path = Rails.root.join('data/river_demo_pdf.pdf')
+
+    send_file pdf_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_shop
