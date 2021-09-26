@@ -30,6 +30,8 @@ gem 'rubyzip', '~> 2.3', '>= 2.3.2'
 gem 'axlsx_rails', '~> 0.6.1'
 gem 'axlsx', git: "https://github.com/randym/axlsx.git",
              ref: "c8ac844572b25fda358cc01d2104720c4c42f450"
+gem 'roo', '~> 2.8', '>= 2.8.3'
+gem 'roo-xls', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
