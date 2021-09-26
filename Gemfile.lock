@@ -111,6 +111,11 @@ GEM
     erubi (1.10.0)
     et-orbi (1.2.4)
       tzinfo
+    factory_bot (6.2.0)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
     ffi (1.15.3)
     fugit (1.5.0)
       et-orbi (~> 1.1, >= 1.1.8)
@@ -311,6 +316,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   combine_pdf (~> 1.0, >= 1.0.21)
+  factory_bot_rails (~> 6.2)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   paranoia (~> 2.1, >= 2.1.5)
