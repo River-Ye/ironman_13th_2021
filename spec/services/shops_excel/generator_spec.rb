@@ -19,5 +19,18 @@ RSpec.describe ShopsExcel::Generator do
     expect(first_sheet.rows[1].cells.map(&:value)).to match_array(
       [@shop.name, @shop.email, @shop.note]
     )
+    # 驗證: 超連結
+    expect_hyperlink = [first_sheet.hyperlinks.first.location, first_sheet.hyperlinks.first.ref]
+    expect(expect_hyperlink).to match_array(
+      ["https://riverye.com/shops/#{@shop.id}", 'A2']
+    )
+    # 驗證: 顏色
+    expect(first_sheet.rows[1].cells.map(&:color).map { |d| d&.rgb }).to match_array(
+      ['FF0000FF', nil, nil]
+    )
+    # 驗證: 底線
+    expect(first_sheet.rows[1].cells.map(&:u)).to match_array(
+      [:single, nil, nil]
+    )
   end
 end
