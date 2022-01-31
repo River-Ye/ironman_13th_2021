@@ -11,7 +11,9 @@ module ShopsExcel
       xlsx = Axlsx::Package.new
       workbook = xlsx.workbook
       workbook.add_worksheet(name: '商家清單') do |sheet|
+        add_auto_filter(sheet)
         sheet.add_row(TITLES)
+        freeze_header(sheet)
         shops.find_each do |shop|
           row_data = shop_row_data(shop)
           links = check_link(row_data)
@@ -23,6 +25,30 @@ module ShopsExcel
     end
 
     private
+
+    # 增加篩選
+    def add_auto_filter(sheet)
+      number = TITLES.size - 1
+      name = ((number % 26) + 'A'.ord).chr
+      excel_column_name =
+        if number < 26
+          name
+        else
+          (((number / 26) - 1) + 'A'.ord).chr + name
+        end
+      sheet.auto_filter = "A1:#{excel_column_name}1"
+    end
+
+    # 凍結第一列
+    def freeze_header(sheet)
+      sheet.sheet_view.pane do |pane|
+        pane.top_left_cell = 'B2'
+        pane.state = :frozen_split
+        pane.y_split = 1
+        pane.x_split = 0
+        pane.active_pane = :bottom_right
+      end
+    end
 
     def shop_row_data(shop)
       [
