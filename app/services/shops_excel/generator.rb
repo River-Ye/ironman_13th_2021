@@ -69,7 +69,11 @@ module ShopsExcel
 
     def add_link(sheet, links, cur_row)
       links.map do |index, link|
-        sheet.add_hyperlink(location: link, ref: sheet.rows[cur_row.row_index].cells[index])
+        ref = sheet.rows[cur_row.row_index].cells[index]
+        # ref.r # A3
+        ref.color = '0000FF' # 藍色
+        ref.u = true # 底線
+        sheet.add_hyperlink(location: link, ref: ref)
       end
     end
   end
